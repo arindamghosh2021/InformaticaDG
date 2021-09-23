@@ -9,8 +9,8 @@ import altair as alt
 import warnings
 
 ############### ONE TIME CONFIGURATION ###########################################
-Axon_hostname= "10.75.153.235"
-Axon_port= "5432"
+Axon_hostname= "<Provide Axon server hostname>"
+Axon_port= "<Provide Axon server port>"
 
 ##################################################################################
 
