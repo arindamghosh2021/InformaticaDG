@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 27 00:07:35 2021
-
-@author: sjain
-"""
-
 import pandas as pd
 import requests
 import json
@@ -18,9 +12,9 @@ logger.setLevel(logging.DEBUG)
 requests.packages.urllib3.disable_warnings(
     requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
-search_url='https://inedclab0101.informatica.com:9085/access/2/catalog/data/search'
-username='Administrator'
-password='Administrator'
+search_url='https://<HOSTNAME>:<PORT>/access/2/catalog/data/search'
+username='<USERNAME>'
+password='<PASSWORD>'
 #param_q={'core.classType':'*.Table','core.resourceName':'sales_sachin'}
 payload={
           'q':'com.infa.ldm.profiling.dataDomainsAccepted:Customer_ID'
@@ -50,7 +44,7 @@ df['bar'] = df.bar.str[:-1]
 def subscribe(row):
     print("name of the table")
     #print (row['bar'])
-    URL_subscr= 'https://inedclab0101.informatica.com:9085/access/2/catalog/data/subscriptions'
+    URL_subscr= 'https://<HOSTNAME>:<PORT>/access/2/catalog/data/subscriptions'
     
     payload_subs = {
             #{
