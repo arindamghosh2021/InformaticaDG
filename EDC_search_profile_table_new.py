@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 26 13:34:55 2021
 
-@author: sjain
-"""
 
 import pandas as pd
 import requests
@@ -11,9 +7,9 @@ import requests
 requests.packages.urllib3.disable_warnings(
     requests.packages.urllib3.exceptions.InsecureRequestWarning)
 
-search_url='https://inedclab0101.informatica.com:9085/access/2/catalog/data/search'
-username='Administrator'
-password='Administrator'
+search_url='https://<HOSTNAME>:<PORT>/access/2/catalog/data/search'
+username='<USERNAME>'
+password='<PASSWORD>'
 #param_q={'core.classType':'*.Table','core.resourceName':'sales_sachin'/Oracle_DD}
 payload={
           'q':'core.classType:*.Table AND core.resourceName:"Oracle_DD"',
