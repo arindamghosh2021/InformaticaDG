@@ -9,8 +9,8 @@ import altair as alt
 import warnings
 
 ############### ONE TIME CONFIGURATION ###########################################
-Axon_hostname= "<Provide Axon server hostname>"
-Axon_port= "<Provide Axon server port>"
+Axon_hostname= "<Axon IP>"
+postgres_port= "<Postgres db port>"
 
 ##################################################################################
 
@@ -49,7 +49,7 @@ if st.button('Submit') or st.session_state.submitted:
             conn = pg.connect(user=username,
             password=password,
             host=Axon_hostname,
-            port=Axon_port,
+            port=postgres_port,
             database="matviewdb")
         except (Exception, pg.Error) as error :
             st.error ("Error while connecting to PostgreSQL due to the below error")
